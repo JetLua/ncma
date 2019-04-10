@@ -34,7 +34,8 @@ const login = (mail, pass) => {
                     encSecKey: data.encSecKey
                 },
                 headers: {
-                    'Referer' : 'http://music.163.com/'
+                    'Referer' : 'http://music.163.com/',
+                    cookie: 'os=pc'
                 }
             },
             function(...args) {
