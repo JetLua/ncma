@@ -1,10 +1,9 @@
 {
-    "name": "music",
-    "version": "1.0.1",
-    "description": "NetEase Music API",
-    "author": "JetLu <i@lufei.so>",
-    "dependencies": {
-        "request"   : "^2",
-        "big.js"    : "^3"
-    }
+  "name": "ncma",
+  "version": "2.0.0",
+  "description": "Netease Cloud Music API",
+  "author": "JetLu <i@lufei.so>",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }

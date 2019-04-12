@@ -1,53 +1,28 @@
-### 安装
+## 安装
 ---
-``` bash
-npm i -g JetLua/netease-cloud-music
+```sh
+npm i -g JetLua/ncma
+```
+
+## 使用
+---
+
+```js
+const music = require('music')
+
+music.login('帐号', '密码').then(info => {
+  console.log(info)
+})
 ```
 
 
+## 更新记录
 
-### 使用
----
+### 2019/04/12
+  - `axios` 替代 `request`
+  - 基于`node.js`的`RSA`加密
 
-``` js
-const music = require('music')
+### 2017/05/20
 
-music.login('帐号', '密码').then(results => {
-    console.log(results)
-})
-
-/*
-* 以下接口
-* 无需登录
-* 即可请求
-*/
-
-
-/*
-* 获取听歌排行
-* uid:
-*    用户 id
-*    打开云音乐的个人主页
-*    链接里会有
-* period:
-*    0: 一周
-*    1: 所有
-*/
-
-music.getRecord('1760687').then(results => {
-    console.log(results)
-})
-
-music.getRecord('1760687', 1).then(results => {
-    console.log(results)
-})
-
-/*
-* 通过歌曲 id 获取 mp3 链接
-* id: 歌曲 id
-*/
-
-music.getUri('326997').then(results => {
-    console.log(results)
-})
+### 2016/09/29
 ```
