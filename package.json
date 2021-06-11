@@ -3,7 +3,15 @@
   "version": "2.0.0",
   "description": "Netease Cloud Music API",
   "author": "JetLu <i@lufei.so>",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": "^0.21.1",
+    "ts-node": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2"
   }
 }
