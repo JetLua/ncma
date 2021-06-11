@@ -5,7 +5,8 @@
   "author": "JetLu <i@lufei.so>",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node index.ts",
+    "tsc": "tsc index.ts"
   },
   "dependencies": {
     "axios": "^0.21.1",

@@ -1,12 +1,10 @@
-#! /usr/bin/env ts-node
-
 import axios from 'axios'
-import crypto from 'crypto'
-import qs from 'querystring'
+import * as crypto from 'crypto'
+import {stringify} from 'querystring'
 
 import {aes, rsa} from './encrypt'
 
-export default function(account: string, password: string) {
+export default function a(account: string, password: string) {
   const salt = '2VRpcLApaHXPa8Rj'
 
   const data = JSON.stringify({
@@ -18,7 +16,7 @@ export default function(account: string, password: string) {
 
   return axios.post(
     'https://music.163.com/weapi/login',
-    qs.stringify({
+    stringify({
       params: aes(aes(data, '0CoJUm6Qyw8W8jud'), salt),
       encSecKey: rsa(Buffer.from('jR8aPXHapALcpRV2'.padStart(128, '\0')))
     }),

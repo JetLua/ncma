@@ -1,4 +1,4 @@
-import crypto from 'crypto'
+import * as crypto from 'crypto'
 
 export function aes(raw: string, key: string) {
   const cipher = crypto.createCipheriv('aes-128-cbc', key, '0102030405060708')
